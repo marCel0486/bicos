@@ -1,0 +1,17 @@
+
+.button{
+  width: 425px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  background: #1B5E20;
+  border: none;
+  color: #fff;
+   
+}
+
+@media (max-width: 600px) {
+  .button {
+    width: 300px;
+  }
+}

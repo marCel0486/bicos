@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+:root{
+    --primary-color: #1B5E20;
+    --secondary-color: #388E3C;
+    --text-color: #212121;
+    --background-color: #f5f5f5;
+    --border-color: #bdbdbd;
+    --text-family: Arial, sans-serif;
+} 
+
+body{
+    background: var(--background-color);
+    font-style: var(--text-family);
+    font-size: 16px;
+}
+

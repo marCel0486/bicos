@@ -1,0 +1,246 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-image: url('../banner.png');
+    height: 960px;
+}
+
+
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.types{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-top: 1px solid var(--background-color);
+    padding: 20px;
+}
+
+.img-container{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--background-color);
+    border-radius: 10px;
+}
+
+p{
+    color: var(--text-color);
+    font-family: var(--text-family);
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.type-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 50px;
+}
+
+.home-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    
+    
+}
+.home-text h1{
+    color: var(--primary-color);
+    font-family: var(--text-family);
+    font-size: 3.5em;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.home-text p{
+    color: #fff;
+    font-family: var(--text-family);
+    font-size: 1.65em;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+
+.home-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 100%;
+    padding: 0 80px;
+   
+}
+
+.home-content h1{
+    color: var(--primary-color);
+    font-family: var(--text-family);
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+.home-content p{
+    color: var(--text-color);
+    font-family: var(--text-family);
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 50%;
+}
+
+
+.home-example{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+
+.img-example{
+    margin-right: 30px;
+}
+
+.img-example h3{
+    color: var(--text-color);
+    font-family: var(--text-family);
+    font-size: 1.2em;
+}
+
+.div-image-example{
+    width: 272px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-position: center;
+}
+
+.content-example{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-example h2{
+    color: var(--primary-color);
+    font-family: var(--text-family);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.content-example p{
+    color: var(--text-color);
+    font-family: var(--text-family);
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.buttons-example{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 175px;
+}
+
+.buttons-example button{
+    background-color: #fff;
+    color: var(--primary-color);
+    font-family: var(--text-family);
+    border: 1px solid var(--primary-color);
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons-example button:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+@media (max-width: 768px){
+    .types{
+        flex-wrap: wrap;
+        height: 80%;
+    }
+
+    .home-container{
+        background-image: none;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 20px;
+    }
+
+    .home-text{
+        width: 70%;
+    }
+
+    .home-text h1{
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: var(--text-color);
+        width: 100%;
+    }
+
+    .home-text p{
+        font-size: 1.2em;
+        color: var(--text-color);
+        width: 100%;
+    }
+
+    .home-text button{
+       color: var(--text-color);
+       background: var(--secondary-color);
+    }
+
+    .home-content h1{
+        font-size: 1.8em;
+        width: 90%;
+    }
+
+    .home-content p{
+        font-size: 1em;
+        width: 90%;
+    }
+
+    .home-example{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttons-example{
+        align-items: center;
+        justify-content: space-around;
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,29 @@
+.footer{
+    background: var(--primary-color);
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    margin-top: 15px;
+
+}
+
+
+
+.footer p{
+    color: #fff;
+    font-family: var(--text-family);
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.social-medias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
