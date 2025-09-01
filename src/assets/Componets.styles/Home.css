@@ -4,9 +4,11 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-image: url('../banner.png');
-    height: 960px;
+    background-image: url('../bannerBig.png');
+    height: 1100px;
 }
+
+
 
 
 
