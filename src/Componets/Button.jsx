@@ -1,16 +1,17 @@
 import React from 'react'
 import '../assets/Componets.styles/Button.css'  
 
-const Button = ({  value, onClick, name}) => {
+const Button = ({  children, onClick, name, type = "button" }) => {
   return (
     <div className='button-whaper'>
       <button
         
-        onClick={onClick}
-        name={name}
-        className="button"
+      type={type}
+      onClick={onClick}
+      name={name}
+      className="button"
       >
-        {value}
+        {children}
       </button>
     </div>
   )

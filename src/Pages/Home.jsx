@@ -77,7 +77,7 @@ de instalação de TV a mudanças.
         value="Solicite um serviço"
         onClick={() => console.log('Solicitar serviço')}
         name="solicitar-serviço"
-        />
+        >Solicite um serviço</Button>
         
       </div>
 
@@ -95,7 +95,7 @@ para serviços rápidos e confiáveis</h1>
         value="Ver serviços"
         onClick={() => console.log('Ver serviços')} 
         name="ver-serviços"
-        />
+        >Ver serviços</Button>
       </div>
 
       <div className="home-example">

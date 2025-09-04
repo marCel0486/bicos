@@ -65,7 +65,7 @@ const [button, setButton] = React.useState('')
       type={button}
       value={"Enviar solicitação"}
       onClick={() => setButton('enviar')}
-      name={"enviar"} />
+      name={"enviar"} >Enviar solicitação</Button>
 
 
    </form>

@@ -21,8 +21,8 @@ const Header = () => {
         <span className="hamburger-bar"></span>
       </button>
       <nav className={menuOpen ? 'open' : ''}>
-        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-        <Link to="/cadastro" onClick={() => setMenuOpen(false)}>Cadastro</Link>
+        <Link to="/home" onClick={() => setMenuOpen(false)}>Home</Link>
+        
         <Link to="/status" onClick={() => setMenuOpen(false)}>Status</Link>
         <Link to="/servicos" onClick={() => setMenuOpen(false)}>Serviços</Link>
         <Link to="/detalhes" onClick={() => setMenuOpen(false)}>Detalhes</Link>
