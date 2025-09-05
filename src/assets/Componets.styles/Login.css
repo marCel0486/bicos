@@ -1,0 +1,88 @@
+.cadastro-link {
+    margin-top: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+    
+}
+
+
+
+.login{
+    display: flex;
+    width: 100%;
+    gap: 50px;
+}
+
+.carp-img{
+    background: var(--primary-color);
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+   
+    
+}
+
+.carp-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.form{
+
+    display: flex;
+    align-items: right;
+    justify-content: end;
+    margin-top: 80px;
+    width: 50%;
+}
+
+
+
+
+
+    
+
+.form-content{
+    margin-bottom: 20px;
+}
+
+.form-content h2{
+    font-size: 2.3em;
+    color: var(--primary-color);
+    font-family: var(--text-family);
+    text-align: center;
+
+}
+
+.form-content h3{
+    font-size: 1.5em;
+    color: var(--text-color);
+    font-family: var(--text-family);
+    font-weight: normal;
+    text-align: center;
+}
+
+.form-content p{
+    font-size: 1.2em;
+    color: var(--text-color);
+    font-family: var(--text-family);
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .login{
+        flex-direction: column;
+    }
+
+    .form{
+        width: 100%;
+        justify-content: center;
+        height: 80vh;
+    }
+
+    .login-img{
+        display: none;
+    }
+}

@@ -22,6 +22,9 @@ const Cadastro = () => {
     if (senha !== confirmarSenha) {
       setMensagem("As senhas não coincidem.")
       return
+    } else if(!nome || !email || !senha || !confirmarSenha) {
+      setMensagem("Por favor, preencha todos os campos.")
+      return
     }
 
     

@@ -4,43 +4,61 @@ import { useState } from 'react'
 import Button from '../Componets/Button'
 import Header from '../Componets/Header'
 import Footer from '../Componets/Footer'  
+import carpinteiro from '../assets/carpinteiro.png'
+import { Link } from 'react-router-dom'
+import '../assets/Componets.styles/Login.css'
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [button, setButton] = useState('')
   return (
-    <>
-    <Header/>
-      <form style={{background: "#f5f5f5", padding: "0", margin: "0", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh"}}>
-
-
-
-          <Input
-          Type={"email"}
-          placeholder={"Digite seu email :"}
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}  
-          name={"email"}  
-          />
-
-          <Input
-          type={password}
-          placeholder={"Digite sua senha :"}
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          name={"senha"}/>
-
-          <Button
-          value={"Login"}
-          onClick={() => setButton('login')}   
-          name={"login"} />
-
-
-
-      </form>
-<Footer />
-</>
    
+    
+          <div className="login">
+            <div className="login-img">
+              <img className='carp-img' src={carpinteiro} alt="" />
+            </div>
+                
+                <div className="form">
+                  
+                    <form style={{background: "#f5f5f5",
+            padding: "0",
+            margin: "0",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "20px",
+            width: "100%"}}>
+                              <div className="form-content">
+                                <h2>Bicos</h2>
+                                <h3>Bem vindo a bicos</h3>
+                                <p>Use suas informações do login 
+                              ou faça seu cadastro. </p>
+                              </div>
+                              <Input
+                              Type={"email"}
+                              placeholder={"Digite seu email :"}
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
+                              name={"email"}
+                              />
+                              <Input
+                              type={password}
+                              placeholder={"Digite sua senha :"}
+                              value={password}
+                              onChange={(e) => setPassword(e.target.value)}
+                              name={"senha"}/>
+                              <Button
+                              value={"Login"}
+                              onClick={() => setButton('login')}
+                              name={"login"} > Login</Button>
+                              <Link to="/" className='cadastro-link'>Ainda não tem uma conta? Cadastre-se</Link>
+                    </form>
+                </div>
+          </div>
+
+
     
   )
 }
