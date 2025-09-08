@@ -1,16 +1,38 @@
-import React from 'react'
+import React, { use } from 'react'
 import Input from '../Componets/Input'
 import { useState } from 'react'
 import Button from '../Componets/Button'
 import Header from '../Componets/Header'
 import Footer from '../Componets/Footer'  
 import carpinteiro from '../assets/carpinteiro.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../assets/Componets.styles/Login.css'
+
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [button, setButton] = useState('')
+  const [mensagem, setMensagem] = useState('')
+
+  const navigate = useNavigate()
+
+  const handleLogin =  (e) => {
+
+
+
+    if(!email || !password) {
+      setMensagem("Por favor, preencha todos os campos.")
+      return
+    }
+
+    e.preventDefault()
+    console.log("Dados de login:", { email, password })
+    setMensagem("Login realizado com sucesso!")
+
+    setTimeout(() => {
+      navigate("/home")
+  }, 1000); // Redireciona após 2 segundos
+  }
   return (
    
     
@@ -49,10 +71,10 @@ const Login = () => {
                               value={password}
                               onChange={(e) => setPassword(e.target.value)}
                               name={"senha"}/>
-                              <Button
-                              value={"Login"}
-                              onClick={() => setButton('login')}
-                              name={"login"} > Login</Button>
+                              <Button type={"submit"} onClick={handleLogin} >
+                                Entrar
+                              </Button>
+                              {mensagem && <p className='mensagem'>{mensagem}</p>}
                               <Link to="/" className='cadastro-link'>Ainda não tem uma conta? Cadastre-se</Link>
                     </form>
                 </div>
