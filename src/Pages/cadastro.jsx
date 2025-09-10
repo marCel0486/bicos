@@ -1,11 +1,9 @@
 import React from 'react'
 import Input from '../Componets/Input'
 import Button from '../Componets/Button'
-import Header from '../Componets/Header'
-import Footer from '../Componets/Footer'
-import '../assets/Componets.styles/Cadastro.css'
 import carpinteiro from '../assets/carpinteiro.png'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import '../assets/Componets.styles/Cadastro.css'
 
 const Cadastro = () => {
   const [nome, setNome] = React.useState('')
@@ -19,27 +17,47 @@ const Cadastro = () => {
   const handleCadastro = (e) => {
     e.preventDefault()
 
-    if (senha !== confirmarSenha) {
-      setMensagem("As senhas não coincidem.")
-      return
-    } else if(!nome || !email || !senha || !confirmarSenha) {
+    if (!nome || !email || !senha || !confirmarSenha) {
       setMensagem("Por favor, preencha todos os campos.")
       return
     }
 
-    
-    console.log("Dados enviados:", { nome, email, senha })
+    if (senha !== confirmarSenha) {
+      setMensagem("As senhas não coincidem.")
+      return
+    }
+
+    // Busca usuários já cadastrados no localStorage
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || []
+
+    // Verifica se já existe usuário com o mesmo email
+    const existe = usuarios.find((user) => user.email === email)
+    if (existe) {
+      setMensagem("Já existe uma conta com esse email.")
+      return
+    }
+
+    // Cria novo usuário
+    const novoUsuario = { id: Date.now(), nome, email, senha }
+
+    // Adiciona no array
+    usuarios.push(novoUsuario)
+
+    // Salva no localStorage
+    localStorage.setItem("usuarios", JSON.stringify(usuarios))
+
     setMensagem("Cadastrado com sucesso!")
 
+    // Redireciona após 1s
     setTimeout(() => {
       navigate("/home")
-  }, 1000); // Redireciona após 2 segundos
+    }, 1000)
   }
 
   return (
     <div className="cadastro">
       <div className="cadastro-img">
-        <img className='carp-img' src={carpinteiro} alt="" />
+        <img className='carp-img' src={carpinteiro} alt="Cadastro" />
       </div>
 
       <div className="form">
@@ -59,7 +77,7 @@ const Cadastro = () => {
         >
           <div className="form-content">
             <h2>Bicos</h2>
-            <h3>Bem vindo a bicos</h3>
+            <h3>Bem-vindo ao Bicos</h3>
             <p>Digite seus dados para se cadastrar.</p>
           </div>
 
